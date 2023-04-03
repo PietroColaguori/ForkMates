@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!--LINK TO CARDS.CSS AND BOOTSTRAP-->
+     <link rel="stylesheet" href="css/cards.css">
+     <link rel="stylesheet" href="css/rating.css">
+     <link rel="stylesheet" href="css/separator.css">
+
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script></head>
+<body>
+     <!--RECIPE CARDS-->
+          
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div id="card-container">
+                         <!--ALL THE VALUES IN HERE WILL BE EXTRACTED FROM THE DB-->
+                         <!-- WE NEED TO ADD A CHAR LIMIT TO THE TITLE AND DETAILS-->
+                    <div id="card-title">Ricetta del Porco dio    
+                    </div>
+                    <a href="homepage.html">
+                        <div id="recipe-image" class="img-thumbnail">
+                        </div>
+                    </a>
+                    <div id="details">
+                        <span class="detail-value">
+                            <img element id = "icon" src="icons/chef.png"/> 
+                                Difficoltà: Facile 
+                        </span>
+                        <span class="detail-value">
+                            <img element id = "icon" src="icons/rolling-pin.png"/> 
+                            Preparazione: 10 minuti
+                        </span>
+                        <span class="detail-value"> 
+                            <img element id = "icon" src="icons/cooking.png"/> 
+                            Cottura: 55 minuti 
+                        </span>
+                        <span class="detail-value">
+                            <img element id = "icon" src="icons/plate.png"/> 
+                             Dosi per: 2 Persone
+                        </span>
+                        <span class="detail-value">
+                            <div class="separator">
+                                <div class="separator__content">
+                                </div>
+                                <!-- Separator line -->
+                                <div class="separator__separator">
+                                </div>
+                                <div class="rating">
+                                    <button class="rating__star">☆</button>
+                                    <button class="rating__star">☆</button>
+                                    <button class="rating__star">☆</button>
+                                    <button class="rating__star">☆</button>
+                                    <button class="rating__star">★</button>
+                                </div>
+                            </div>
+                        </span>
+                    </div>  
+                </div>
+            </div>
+            
+        </div>
+    </div>    
+   
+</body>
+</html>
+
+
+
+
+
+
