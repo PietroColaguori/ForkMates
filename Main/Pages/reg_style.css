@@ -1,11 +1,11 @@
 body {
-    background-color: #990000;
+    background-color: #FF5B00 !important;
   }
 
   form {
     width: 60%;
     margin: 60px auto;
-    background: #836953;
+    background: #00a4ff;
     padding: 60px 120px 80px 120px;
     text-align: center;
     -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
@@ -62,7 +62,7 @@ body {
   }
   
   button {
-    border-radius: 25px;
+    border-radius: 25px !important;
     display: inline-block;
     padding: 12px 24px;
     background: rgb(220,220,220);
