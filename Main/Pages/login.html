@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign In</title>
+        <link rel="stylesheet" href="./reg_style.css">
+        <script src="./reg_validate.js"></script><!--
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+        <link href="../css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    </head>
+    <body>
+        <form onsubmit="return loginValidation();">
+            <label>
+                <p class="label-txt">Enter your email</p>
+                <input type="text" class="input" id="username" required>
+                <div class="line-box">
+                  <div class="line"></div>
+                </div>
+            </label><br>
+            <label>
+              <p class="label-txt">Enter your password</p>
+              <input type="email" class="input" id="email" required>
+              <div class="line-box">
+                <div class="line"></div>
+              </div>
+            </label><br><br>
+            <button type="submit">Sign In</button>
+            <button type="reset">Clear</button>
+            <br><br>
+            <a href="registration.html">No account yet? Sign Up!</a>
+          </form>
+    </body>
+</html>
