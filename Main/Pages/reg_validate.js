@@ -46,3 +46,15 @@ function formValidation() {
 
   return true
 }
+
+function loginValidation() {
+  // controlla che coppia (email, password) sia nel database
+  var email = document.getElementById("email").value
+  if(! validateEmail(email)) {
+    alert("Invalid email")
+    return false
+  }
+
+  return true
+
+}
