@@ -28,6 +28,7 @@ body {
     transition: ease .3s;
   }
   .input {
+    color:#FF5B00;
     width: 100%;
     padding: 10px;
     background: transparent;
@@ -77,5 +78,13 @@ body {
   button:hover {
     background: #ffd394;
     color: #FF5B00;
+  }
+
+  #backhome {
+    position: absolute;
+    margin-top: 10px;
+    margin-left: 500px;
+    top: 0;
+    left: 0;
   }
   
