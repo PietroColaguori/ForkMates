@@ -3,8 +3,8 @@ body {
   }
 
   form {
-    width: 60%;
-    margin: 60px auto;
+    width: 500px !important;
+    margin: 30px auto;
     background: #3F0071;
     padding: 60px 120px 80px 120px;
     text-align: center;
