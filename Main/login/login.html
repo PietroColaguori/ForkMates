@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Sign In</title>
+        <link rel="stylesheet" href="./reg_style.css">
+        <script src="./log_validate.js"></script><!--
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">-->
+        <link href="../css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+
+        <!-- GO BACK HOME BUTTON -->
+        <p><button id="backhome" onclick="location.href = '../Homepage.html'"><i class="w3-margin-left material-icons">home</i></button></p>
+
+        <!-- SIGN IN FORM -->
+        <form action="login.php" method="POST" onsubmit="return loginValidation()">
+            <label>
+                <p class="label-txt">Enter your email</p>
+                <input type="text" class="input" id="email" name="inputEmail" namerequired>
+                <div class="line-box">
+                  <div class="line"></div>
+                </div>
+            </label><br>
+            <label>
+              <p class="label-txt">Enter your password</p>
+              <input type="password" class="input" id="password" name="inputPassword" required>
+              <div class="line-box">
+                <div class="line"></div>
+              </div>
+            </label><br><br>
+            <button type="submit" id="signin">Sign In</button>
+            <button type="reset" id="clear">Clear</button>
+            <br><br>
+            <a href="../registration/registration.html">No account yet? Sign Up!</a>
+          </form>
+    </body>
+</html>
