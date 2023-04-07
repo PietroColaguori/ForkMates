@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registration</title>
+        <link rel="stylesheet" href="./reg_style.css">
+        <script src="./reg_validate.js"></script>
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    </head>
+    <body>
+      <!-- RETURN HOME BUTTON -->
+      <p><button id="backhome" onclick="location.href = '../Homepage.html'"><i class="w3-margin-left material-icons">home</i></button></p>
+
+      <!-- REGISTRATION FORM -->
+        <form action="register.php" class="form-signin" method="post" name="myReg" onsubmit="return formValidation()">
+            <label>
+                <p class="label-txt">Select an username</p>
+                <input type="text" class="input" id="username" name="inputUsername" required>
+                <div class="line-box">
+                  <div class="line"></div>
+                </div>
+            </label><br>
+            <label>
+              <p class="label-txt">Enter your email</p>
+              <input type="email" class="input" id="email" name="inputEmail" required>
+              <div class="line-box">
+                <div class="line"></div>
+              </div>
+            </label><br>
+            <label>
+              <p class="label-txt">Create your password</p>
+              <input type="password" class="input" id="password" name="inputPassword" required>
+              <div class="line-box">
+                <div class="line"></div>
+              </div>
+            </label><br>
+            <label>
+                <p class="label-txt">Repeat password</p>
+                <input type="password" class="input" id="passwordd" required>
+                <div class="line-box">
+                  <div class="line"></div>
+                </div>
+            </label><br><br>
+            <button type="submit">Sign Up</button>
+            <button type="reset">Clear</button>
+            <br><br>
+            <a href="../login/login.html">Already have an account? Sign In!</a>
+          </form>
+    </body>
+</html>
