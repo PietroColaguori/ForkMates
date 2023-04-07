@@ -17,7 +17,7 @@
             }
             else {
                 $username = $_POST['inputUsername'];
-                $pswd = $_POST['inputPassword'];
+                $pswd = password_hash($_POST['inputPassword'], PASSWORD_DEFAULT);
                 $query = "INSERT INTO utenti VALUES($1,$2,$3)";
                 $result = pg_query_params($dbconn, $query, array($username, $email, $pswd));
 
