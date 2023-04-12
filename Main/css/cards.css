@@ -8,8 +8,8 @@ body {
   background: #ededed;
   box-shadow: 0px 0px 200px #999;
   font-family: 'Oxygen', sans-serif;
-  width: auto;
-  height: auto;
+  max-width: 100%;
+  max-height: 100%;
   margin: 5% auto;
 }
 
@@ -17,8 +17,8 @@ body {
   font-family: 'Oxygen', sans-serif;
   font-weight: 700;
   font-size: 25px;
-  max-height: 100px;
-  max-width: 300px;
+  max-height: 100%;
+  max-width: 100%;
   text-align: center;
   background: #3F0071;
   padding: 15px 20px;
@@ -39,7 +39,7 @@ body {
 .detail-value {
   color: #455560;
   display: block;
-  max-width: 300px;
+  max-width: 100%;
   overflow: auto;
 }
 
@@ -48,67 +48,33 @@ body {
   font-family: 'Oxygen', sans-serif;
   padding: 20px
 }
-
-.card-item-title {
-  font-size: 18px;
-  font-weight: 700;
-}
-
-ul.checkmark li:before {
-    color: #455560;
-    content:"\2713\0020";
-    font-weight: 600;
-    margin-left: -38px;
-    margin-right: 10px;
-}
-
-.checkmark li {
-  list-style-type: none;
-}
-
-li {
-  margin-bottom: 3px;
-}
-
-#method {
-  background: #fff;
-  border-left: solid 1px #ededed;
-  border-right: solid 1px #ededed;
-  border-bottom: solid 1px #ededed;
-  padding: 20px;
-}
-
-#method li {
-  list-style-position: inside;
-  margin-bottom: 10px;
-  margin-left: -38px;
-  list-style-type: none;
-}
 /*THIS IMG WILL BE EXTRACTED FROM THE DB */
 #recipe-image {
-  background: url('https://images.unsplash.com/photo-1497534547324-0ebb3f052e88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1290&q=80');
   overflow: hidden;
-  height: 200px;
-  width: 300px;
+  max-width:100%;
+  max-height:100%;
   object-fit: cover;
   background-size: cover;
 }
 
-ol {
-  counter-reset: item;
-}
 
-ol > li {
-  counter-increment: item;
-}
-
-ol > li::before {
-  font-weight: bold;
-  content: counter(item) ".";
-  margin-right: 8px;
-}
 
 #icon{
 height: 7%;
 width: 6%;
+}
+
+#logo{
+  cursor: pointer;
+  max-height: 3.5%;
+  max-width: 3.5%;
+}
+
+#card-container2 {
+  background: #ededed;
+  box-shadow: 0px 0px 200px #999;
+  font-family: 'Oxygen', sans-serif;
+  max-width: 100%;
+  max-height: 100%;
+  margin: 5% auto;
 }
