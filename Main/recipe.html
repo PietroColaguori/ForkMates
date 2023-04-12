@@ -8,24 +8,131 @@
         <link rel="stylesheet" href="css/rating.css">
         <link rel="stylesheet" href="css/separator.css">
         <link rel="stylesheet" href="css/recipestyle.css">
+
 </head>
 <body>
-        <!--TOPNAV-->
-            <div class="topnav">
-            <a class="active" href="home.html">ForkMates</a>
-            <a href="login.html">Sign In</a>
-            
-            <a href="Pages/registration.html">Sign Up</a>
-            <a href="about.html">About</a>
-            <div class="search-container">
-              <form action="/ricerca_ricetta.php">
-                <input type="text" placeholder="Search a Recipe!" name="search" size="50">
-                <button type="submit">Search</button>
-              </form>  
+  <!-- NAVIGATION BAR-->
+  <div class="topnav">
+    <img element id = "logo" src="icons/cooking.png"/> 
+    <a class="active" href="Homepage.html">ForkMates</a>
+    <a href="login/login.html">Sign In</a>
+    
+    <a href="registration/registration.html">Sign Up</a>
+    <a href="about.html">About</a>
+    <div class="search-container">
+        <form action="/ricerca_ricetta.php">
+          <input type="text" placeholder="Search a Recipe!" name="search" size="50">
+          <button type="submit">Search</button>
+        </form>
+      </div>
+  </div>
+<main>
+   <!--RECIPE CARDS-->
+  <div class="container" name = "CARTA RICETTA">
+    <div class="row">
+      <div class="col-md-6">
+          <div id="card-container">
+                   <!--ALL THE VALUES IN HERE WILL BE EXTRACTED FROM THE DB-->
+                   <!-- WE NEED TO ADD A CHAR LIMIT TO THE TITLE AND DETAILS-->
+              <div id="card-title">Recipe of Porco Dio
               </div>
-        <!-- IL LOGO NON SI ADATTA ALLA DIMENSIONE DELLA PAGINA DA SISTEMARE-->
-              <img element id = "logo" src="icons/cooking.png"/> 
+              <a href="recipe.html">
+                  <img element id ="recipe-image" src="icons/ricetta.jpeg">
+              </a>
+          </div>
+      </div>
+      <div class="col-md-6">
+        <div id="card-container2">
+          <div id="details">
+            <span class="detail-value">
+                <img element id = "icon" src="icons/chef.png"/> 
+                    Difficulty: easy 
+            </span>
+            <span class="detail-value">
+                <img element id = "icon" src="icons/rolling-pin.png"/> 
+                Prep Time: 10 minutes
+            </span>
+            <span class="detail-value"> 
+                <img element id = "icon" src="icons/cooking.png"/> 
+                Cooking: 55 minutes 
+            </span>
+            <span class="detail-value">
+                <img element id = "icon" src="icons/plate.png"/> 
+                Recipe for: 2 People
+            </span>
+            <span class="detail-value">
+                <div class="separator">
+                    <div class="separator__content">
+                    </div>
+                    <div name="Separator"></div>
+                    <!-- Separator line -->
+                    <div class="separator__separator">
+                    </div>
+                    <div class="rating">
+                        <button class="rating__star">☆</button>
+                        <button class="rating__star">☆</button>
+                        <button class="rating__star">☆</button>
+                        <button class="rating__star">☆</button>
+                        <button class="rating__star">★</button>
+                  </div>
+                </div>
+              </span>
+            </div>
+          </div>  
         </div>
+      </div>
+    </div> 
+  </div>
+
+
+  <div class="container" name = "PRESENTAZIONE">
+    <div class="row">
+      <div class="col-md-3">
+        INGREDIENTI:
+        <br>
+        Dio in salamoia 100gr
+        <br>
+        Olio extravergine di oliva Q.B.
+        <br>
+        Farina tipo 00 100gr
+        <br>
+        Papilloma virus 2/3 infetti
+        <br>
+        5
+        <br>
+        6
+        <br>
+        7
+        <br>
+        8
+        <br>
+        9
+        <br>
+        10
+        <br>
+        11
+        <br>
+        12
+        <br>
+        13
+        <br>
+        14
+        <br>
+        15
+
+      </div>
+      <div class="col-md-9">
+        PRESENTAZIONE <br>
+        La ricetta del porco di dio è un piatto tradizionale della cultura sarda. Ottimo da servire ad una cena con familiari, amici o chi lo sa, persino amanti.
+        La cottura richiede poco tempo e la soddisfazione è assicurata
+      </div>
+    </div>
+    
+  </div> 
+</main>
+
+
+
   <!-- Site footer -->
   <footer class="site-footer">
     <div class="container">
