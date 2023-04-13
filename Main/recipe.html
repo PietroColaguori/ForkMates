@@ -8,6 +8,7 @@
         <link rel="stylesheet" href="css/rating.css">
         <link rel="stylesheet" href="css/separator.css">
         <link rel="stylesheet" href="css/recipestyle.css">
+        
 
 </head>
 <body>
@@ -29,7 +30,7 @@
 <main>
    <!--RECIPE CARDS-->
   <div class="container" name = "CARTA RICETTA">
-    <div class="row">
+    <div class="row-gy-5">
       <div class="col-md-6">
           <div id="card-container">
                    <!--ALL THE VALUES IN HERE WILL BE EXTRACTED FROM THE DB-->
@@ -88,46 +89,63 @@
   <div class="container" name = "PRESENTAZIONE">
     <div class="row">
       <div class="col-md-3">
-        INGREDIENTI:
-        <br>
-        Dio in salamoia 100gr
-        <br>
-        Olio extravergine di oliva Q.B.
-        <br>
-        Farina tipo 00 100gr
-        <br>
-        Papilloma virus 2/3 infetti
-        <br>
-        5
-        <br>
-        6
-        <br>
-        7
-        <br>
-        8
-        <br>
-        9
-        <br>
-        10
-        <br>
-        11
-        <br>
-        12
-        <br>
-        13
-        <br>
-        14
-        <br>
-        15
-
+        <div id='ingredient-title'>
+          INGREDIENTS:
+        </div>
+        <div id="ingredients">
+          Dio in salamoia 100gr
+          <br>
+          Olio extravergine di oliva Q.B.
+          <br>
+          Farina tipo 00 100gr
+          <br>
+          Papilloma virus 2/3 infetti
+          <br>
+          5
+          <br>
+          6
+          <br>
+          7
+          <br>
+          8
+          <br>
+          9
+          <br>
+          10
+          <br>
+          11
+          <br>
+          12
+          <br>
+          13
+          <br>
+          14
+          <br>
+          15
+        </div>
+        <button onclick="download()" class="button">Download the ingredients!</button>
+        <script type="text/javascript">
+          function download() {
+              var a = document.body.appendChild(
+                 document.createElement("a")
+              );
+             a.download = "Ingredients.html";
+             a.href = "data:text/html," + document.getElementById("ingredients").innerHTML;
+             a.click(); //Trigger a click on the element
+          }
+      </script>
+  
       </div>
       <div class="col-md-9">
-        PRESENTAZIONE <br>
-        La ricetta del porco di dio è un piatto tradizionale della cultura sarda. Ottimo da servire ad una cena con familiari, amici o chi lo sa, persino amanti.
-        La cottura richiede poco tempo e la soddisfazione è assicurata
+        <div id='ingredient-title'>
+          PRESENTAZIONE: 
+        </div>
+        <div id='ingredients'>
+          La ricetta del porco di dio è un piatto tradizionale della cultura sarda. Ottimo da servire ad una cena con familiari, amici o chi lo sa, persino amanti.
+          La cottura richiede poco tempo e la soddisfazione è assicurata
+        </div>
       </div>
     </div>
-    
   </div> 
 </main>
 
