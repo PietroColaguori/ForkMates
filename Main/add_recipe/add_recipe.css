@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Oxygen:400,700');
+
+body {
+    background-color: #FFA9C9 !important;
+    font-family:  'Oxygen', sans-serif;
+}
+
+#mainForm {
+    width: 1000px !important;
+    margin: 30px auto;
+    background: #AC7FE2;
+    padding: 60px 100px 60px 100px;
+    -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+    border-radius: 25px;
+    color: #FFFFFF;
+}
+
+.topnav {
+    overflow: hidden;
+    background-color: #969EFA;
+  }
+  
+  .topnav a {
+    float: left;
+    display: block;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    background-color: #AC7FE2;
+    color: white;
+  }
+  
+  .topnav a.active {
+    background-color: #AC7FE2;
+    color: white;
+  }
+  
+  .topnav .search-container {
+    float: right;
+  }
+  
+  .topnav input[type=text] {
+      border-radius: 25px;
+    padding: 6px;
+    margin-top: 8px;
+    font-size: 17px;
+    border: none;
+  }
+  
+  .topnav .search-container button {
+      border-radius: 25px;
+    float: right;
+    padding: 6px 10px;
+    margin-top: 8px;
+    margin-right: 16px;
+    background: #ddd;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .topnav .search-container button:hover {
+    background: #FFA9C9;
+    color: #FFFFFF
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav .search-container {
+      float: none;
+    }
+    .topnav a, .topnav input[type=text], .topnav .search-container button {
+      float: none;
+      display: block;
+      text-align: left;
+      width: 100%;
+      margin: 0;
+      padding: 14px;
+    }
+    .topnav input[type=text] {
+      border: 1px solid #ccc;  
+    }
+}
+  #logo{
+      cursor: pointer;
+      height: 3.5%;
+      width: 3.5%;
+}
+
