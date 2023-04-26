@@ -7,7 +7,7 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #FF5B00;
+  background-color: #969EFA;
 }
 
 .topnav a {
@@ -21,12 +21,12 @@ body {
 }
 
 .topnav a:hover {
-  background-color: #990000;
+  background-color: #AC7FE2;
   color: white;
 }
 
 .topnav a.active {
-  background-color: #990000;
+  background-color: #AC7FE2;
   color: white;
 }
 
@@ -55,7 +55,8 @@ body {
 }
 
 .topnav .search-container button:hover {
-  background: #ccc;
+  background: #FFA9C9;
+  color: #FFFFFF;
 }
 
 @media screen and (max-width: 600px) {
@@ -83,8 +84,8 @@ body {
 
 .button {
   margin: auto;
-  background: #FF4742;
-  border: 1px solid #FF4742;
+  background: #AC7FE2;
+  border: 1px solid #AC7FE2;
   border-radius: 100px;
   color: #FFFFFF;
   cursor: pointer;
@@ -100,8 +101,8 @@ body {
   touch-action: manipulation;
 }
 .button2 {
-  background: #3F0071;
-  border: 6px solid #3F0071;
+  background: #FFA9C9;
+  border: 6px solid #FFA9C9;
   border-radius: 100px;
   color: #FFFFFF;
   font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
@@ -120,9 +121,30 @@ body {
 .button:active {
   background-color: initial;
   background-position: 0 0;
-  color: #FF4742;
+  color: #969EFA;
 }
 
 .button:active {
   opacity: .5;
+}
+
+.buttonDown{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 15px;
+    background: #AC7FE2;
+    border: 1px solid #AC7FE2;
+    border-radius: 100px;
+    color: #FFFFFF;
+    cursor: pointer;
+    font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 16px;
+    padding: 12px 14px;
+    text-align: center;
+    text-rendering: geometricprecision;
+    text-transform: none;
+    user-select: none;
+    touch-action: manipulation;
 }
