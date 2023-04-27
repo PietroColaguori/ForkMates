@@ -1,11 +1,11 @@
 body {
-    background-color: #FF5B00 !important;
+    background-color: #969EFA !important;
   }
 
   form {
     width: 500px !important;
     margin: 30px auto;
-    background: #3F0071;
+    background: #AC7FE2;
     padding: 60px 120px 80px 120px;
     text-align: center;
     -webkit-box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
@@ -28,7 +28,7 @@ body {
     transition: ease .3s;
   }
   .input {
-    color:#FF5B00;
+    color:#969EFA;
     width: 100%;
     padding: 10px;
     background: transparent;
@@ -50,7 +50,7 @@ body {
     top: 0px;
     left: 50%;
     transform: translateX(-50%);
-    background: #FF5B00;
+    background: #969EFA;
     transition: ease .6s;
   }
   
@@ -77,7 +77,7 @@ body {
   
   button:hover {
     background: #ffd394;
-    color: #FF5B00;
+    color: #969EFA;
   }
 
   #backhome {
