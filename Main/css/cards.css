@@ -10,6 +10,7 @@ body {
   font-family: 'Oxygen', sans-serif;
   max-width: 100%;
   max-height: 100%;
+  overflow: scroll;
   margin: 5% auto;
 }
 
@@ -19,6 +20,7 @@ body {
   font-size: 25px;
   max-height: 100%;
   max-width: 100%;
+  white-space: nowrap;
   text-align: center;
   background: #969EFA;
   padding: 15px 20px;
@@ -50,10 +52,10 @@ body {
 }
 /*THIS IMG WILL BE EXTRACTED FROM THE DB */
 #recipe-image {
-  overflow: hidden;
-  max-width:100%;
-  max-height:100%;
-  object-fit: cover;
+  overflow: scroll;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: fill !important;
   background-size: cover;
 }
 

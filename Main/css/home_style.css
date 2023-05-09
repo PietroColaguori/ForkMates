@@ -35,7 +35,7 @@ body {
 }
 
 .topnav input[type=text] {
-    border-radius: 25px;
+  border-radius: 25px;
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
@@ -43,7 +43,7 @@ body {
 }
 
 .topnav .search-container button {
-    border-radius: 25px;
+  border-radius: 25px;
   float: right;
   padding: 6px 10px;
   margin-top: 8px;
@@ -55,7 +55,7 @@ body {
 }
 
 .topnav .search-container button:hover {
-  background: #FFA9C9;
+  background: #AC7FE2;
   color: #FFFFFF;
 }
 
@@ -101,8 +101,8 @@ body {
   touch-action: manipulation;
 }
 .button2 {
-  background: #FFA9C9;
-  border: 6px solid #FFA9C9;
+  background: #969EFA;
+  border: 6px solid #969EFA;
   border-radius: 100px;
   color: #FFFFFF;
   font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
@@ -116,13 +116,102 @@ body {
   user-select: none;
   touch-action: manipulation;
 }
+.button3 {
+  margin: auto;
+  background: #AC7FE2;
+  border: 1px solid #AC7FE2;
+  border-radius: 100px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 16px;
+  padding: 12px 14px;
+  margin-top: 15px;
+  margin-left: 10px;
+  margin-bottom: 15px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  touch-action: manipulation;
+}
 
-.button:hover,
-.button:active {
+.button4 {
+  margin: auto;
+  background: #AC7FE2;
+  border: 1px solid #AC7FE2;
+  border-radius: 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.button4:hover,
+.button4:active {
   background-color: initial;
   background-position: 0 0;
   color: #969EFA;
 }
+
+.button4:active {
+  opacity: .5;
+}
+
+.button4:hover,
+.button4:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #969EFA;
+}
+
+.button5 {
+  margin: auto;
+  background: #969EFA;
+  border: 1px solid #969EFA;
+  border-radius: 5px;
+  color: #FFFFFF;
+  cursor: pointer;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 16px;
+  padding: 12px 14px;
+  text-align: center;
+  text-rendering: geometricprecision;
+  text-transform: none;
+  user-select: none;
+  touch-action: manipulation;
+}
+
+.button5:hover,
+.button5:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #AC7FE2;
+}
+
+.button5:active {
+  opacity: .5;
+}
+
+.button5:hover,
+.button5:active {
+  background-color: initial;
+  background-position: 0 0;
+  color: #969EFA;
+}
+
 
 .button:active {
   opacity: .5;
@@ -147,4 +236,52 @@ body {
     text-transform: none;
     user-select: none;
     touch-action: manipulation;
+}
+
+.modal-dialog{
+  text-align: center;
+
+}
+
+.modal-title{
+  border: none;
+  text-align: center;
+  font-family: nunito,roboto,proxima-nova,"proxima nova",sans-serif;
+  font-size: 24px;
+  color: #AC7FE2; 
+  margin-bottom: 5px;
+
+  
+}
+
+.modal-interface{
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.textmodal{
+  height: 100px;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  border: 1px solid #969EFA;
+  border-radius: 5px;
+  padding: 1px;
+  overflow: scroll;
+  font-size: 16px;;
+  max-width: 100%;
+}
+
+.selezione{
+  border: 1px solid #000000;
+  margin-right: 20px;
+  margin-left: 20px;
+  width: 5%;
+  text-align: center;
+}
+
+.textmodal:hover{
+  border: 2px solid #969EFA;
 }

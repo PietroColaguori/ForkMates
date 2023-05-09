@@ -9,7 +9,7 @@
 
 .rating__star:hover,
 .rating__star:hover ~ .rating__star {
-    color: transparent;
+    color: #eab308;
 }
 
 /*
