@@ -15,6 +15,7 @@
     </head>
     <body>
         <?php
+            session_start();
             $email = $_POST['inputEmail'];
             $query = "SELECT * FROM utenti WHERE email=$1";
             $result = pg_query_params($dbconn, $query, array($email));
@@ -22,7 +23,13 @@
             if($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
                 if(password_verify($_POST['inputPassword'], $line['pswd'])) {
                     $user = $line['username'];
+                    // salvo dati per futuro uso
+                    $_SESSION['loggedIn'] = true;
+                    $_SESSION['username'] = $line['username'];
+                    $_SESSION['email'] = $email;
+                    $_SESSION['picture'] = $line['picture'];
                     echo "Login successful. <br> Welcome $user!";
+                    header("Location: ../Homepage.php");
                 }
                 else {
                     echo "The password you entered is incorrect.";

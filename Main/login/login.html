@@ -9,12 +9,10 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
-
-        <!-- GO BACK HOME BUTTON -->
-        <p><button id="backhome" onclick="location.href = '../Homepage.html'"><i class="w3-margin-left material-icons">home</i></button></p>
-
         <!-- SIGN IN FORM -->
         <form action="login.php" method="POST" onsubmit="return loginValidation()">
+            <!-- GO BACK HOME BUTTON -->
+            <p><button id="backhome" onclick="location.href = '../Homepage.php'"><i class="w3-margin-left material-icons">home</i></button></p>
             <label>
                 <p class="label-txt">Enter your email</p>
                 <input type="text" class="input" id="email" name="inputEmail" namerequired>
