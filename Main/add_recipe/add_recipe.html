@@ -13,10 +13,13 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
     </head>
     <body>
 
         <!-- MODAL DIALOG -->
+
         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
             <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -44,27 +47,12 @@
             </div>
             </div>
         </div>
-  
-        <!-- NAVBAR SECTION ================================================================================================== -->
-        <div class='topnav'>
-            <img element id = 'logo' src='../icons/cooking.png'/> 
-            <a class="active\" href="../Homepage.php">ForkMates</a>
-    
-            <a href='../add_recipe/add_recipe.html'>Add a recipe</a>
-            <a href='../profile/profile.php'>Your Profile</a>
-            <a href="#" data-toggle="modal" data-target="#myModal">Contact us</a>
-            <div class="search-container">
-                <form action="../ricerca_ricetta.php\">
-                  <input type="text" placeholder="Search a Recipe!" name="search" size="50" autocomplete="off">
-                  <button type="button" class='btn btn-light'>Search</button>
-                </form>
-              </div>
-        </div>
 
         <!-- FORM SECTION ==================================================================================================== -->
         <div class="row" id="main-div">
             <div class="mx-auto col-10 col-md-8 col-lg-6" id="second-div">
-                <form action="add_recipe.php" method="POST" recipeForm" id="mainForm" onsubmit="return validateForm();" enctype="multipart/form-data">
+                <form action="add_recipe.php" method="POST" id="mainForm" onsubmit="return validateForm();" enctype="multipart/form-data">
+                    <p><button id="backhome" onclick="location.href = '../Homepage.php'"><i class="w3-margin-left material-icons">home</i></button></p>
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="recipeTitle">Recipe Name</label>
@@ -74,10 +62,9 @@
                             <label for="recipeCategory">Select a Category</label>
                             <select name="inputCategory" id="recipeCategory" class="form-control" required>
                                 <option selected>Choose...</option>
-                                <option>Appetizer</option>
-                                <option>First Dish</option>
-                                <option>Second Dish</option>
+                                <option>Entree</option>
                                 <option>Main Dish</option>
+                                <option>Second Dish</option>
                                 <option>Dessert</option>
                             </select>
                         </div>
@@ -95,6 +82,40 @@
                         <label for="recipeProcedure">Procedure</label>
                         <textarea name = "inputProcedure" class="form-control" rows="6" id="recipeProcedure" placeholder="Write down the procedure..." required></textarea>
                     </div><br>
+
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                            <label for="recipeDifficulty">Difficulty</label>
+                            <select class="form-control" id="recipeDifficulty" name="inputDifficulty" required>
+                                <option selected>Choose...</option>
+                                <option>Easy</option>
+                                <option>Medium</option>
+                                <option>Hard</option>
+                            </select>
+                        </div><br>
+                        <div class="form-group col-md-3">
+                            <label for="recipePrepTime">Preparation Time</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="recipePrepTime" min="1" name="inputPrepTime" required> 
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Minutes</span>
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="form-group col-md-3">
+                            <label for="cookingTime">Cooking Time</label>
+                            <div class="input-group">
+                                <input type="number" class="form-control" id="cookingTime" min="1" name="inputCookTime" required> 
+                                <div class="input-group-append">
+                                    <span class="input-group-text">Minutes</span>
+                                </div>
+                            </div>
+                        </div><br>
+                        <div class="form-group col-md-3">
+                            <label for="numPeople">Number of People</label>
+                            <input type="number" class="form-control" id="numPeople" min="1" name="inputNumPeople" required>
+                        </div>
+                    </div>
 
                     <div class="form-row">
                         <div class="form-group col-md-6">

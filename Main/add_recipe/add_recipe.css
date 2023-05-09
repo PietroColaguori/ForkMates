@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Oxygen:400,700');
 
 body {
-    background-color: #FFA9C9 !important;
+    background-color: #969EFA !important;
     font-family:  'Oxygen', sans-serif;
 }
 
@@ -92,3 +92,25 @@ body {
       width: 3.5%;
 }
 
+  
+button {
+  border-radius: 25px !important;
+  display: inline-block;
+  padding: 12px 24px;
+  background: rgb(220,220,220);
+  font-weight: bold;
+  color: rgb(120,120,120);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: ease .3s;
+}
+
+button:hover {
+  background: #ffd394;
+  color: #969EFA;
+}
+
+#backhome {
+  position: sticky;
+}
