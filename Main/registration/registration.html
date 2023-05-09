@@ -8,11 +8,10 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     </head>
     <body>
-      <!-- RETURN HOME BUTTON -->
-      <p><button id="backhome" onclick="location.href = '../Homepage.html'"><i class="w3-margin-left material-icons">home</i></button></p>
-
       <!-- REGISTRATION FORM -->
-        <form action="register.php" class="form-signin" method="post" name="myReg" onsubmit="return formValidation()">
+        <form action="register.php" class="form-signin" method="post" onsubmit="return formValidation();" enctype="multipart/form-data">
+            <!-- RETURN HOME BUTTON -->
+            <p><button id="backhome" onclick="location.href = '../Homepage.php'"><i class="w3-margin-left material-icons">home</i></button></p>
             <label>
                 <p class="label-txt">Select an username</p>
                 <input type="text" class="input" id="username" name="inputUsername" required>
@@ -40,7 +39,15 @@
                 <div class="line-box">
                   <div class="line"></div>
                 </div>
-            </label><br><br>
+            </label>
+            <label>
+                <p class="label-txt">Upload a profile picture</p>
+                <input type="file" class="input" id="picture" name="inputImage">
+                <div class="line-box">
+                  <div class="line"></div>
+                </div>
+            </label>
+            <br><br>
             <button type="submit">Sign Up</button>
             <button type="reset">Clear</button>
             <br><br>

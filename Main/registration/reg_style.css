@@ -81,10 +81,6 @@ body {
   }
 
   #backhome {
-    position: absolute;
-    margin-top: 10px;
-    margin-left: 500px;
-    top: 0;
-    left: 0;
+    position: sticky;
   }
   
