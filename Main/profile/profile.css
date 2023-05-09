@@ -34,7 +34,7 @@ img {
     font-weight: 300;
 }
 
-.profile-edit-btn {
+#profile-edit-btn {
     font-size: 1.4rem;
     line-height: 1.8;
     border: 0.1rem solid #dbdbdb;
