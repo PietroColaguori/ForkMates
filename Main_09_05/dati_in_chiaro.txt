@@ -1,0 +1,7 @@
+Username       Email                   Password
+====================================================================
+PrimoUser      primouser@gmail.com      PrimaPass3
+PietroCol      pietrocol@gmail.com      SonoPietro9
+ChiaraIanny    chiara@iannicelli.com    SonoChiara78
+Mario Rossi    mariorossi@yahoo.com     sonoMario9
+UtenteTest     test@test.com            sonoTest44
