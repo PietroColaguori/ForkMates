@@ -91,7 +91,7 @@
         <a href=\"#\" data-toggle=\"modal\" data-target=\"#myModal\">Contact us</a>
         <a href='logout.php'>Logout</a>
         <div class=\"search-container\">
-            <form action=\"/ricerca_ricetta.php\">
+            <form method=\"POST\"action=\"./ricerca_ricetta.php\">
               <input id=\"searchbar\" type=\"text\" placeholder=\"Search a Recipe!\" name=\"search\" size=\"50\" autocomplete=\"off\">
               <button type=\"button\" class='btn btn-light'>Search</button>
             </form>
@@ -101,13 +101,13 @@
   else {
     echo "<div class='topnav'>
         <img element id = 'logo' src='icons/cooking.png'/> 
-        <a class=\"active\" href=\"Homepage.html\">ForkMates</a>
+        <a class=\"active\" href=\"Homepage.php\">ForkMates</a>
         <a href=\"login/login.html\">Sign In</a>
         
         <a href=\"registration/registration.html\">Sign Up</a>
         <a href=\"#\" data-toggle=\"modal\" data-target=\"#myModal\">Contact us</a>
         <div class=\"search-container\">
-            <form action=\"/ricerca_ricetta.php\">
+            <form method=\"POST\" action=\"/ricerca_ricetta.php\">
               <input id=\"searchbar\" type=\"text\" placeholder=\"Search a Recipe!\" name=\"search\" size=\"50\" autocomplete=\"off\">
               <button type=\"submit\">Search</button>
             </form>
@@ -116,7 +116,7 @@
   }
 ?>
 
-<!-- SET AUTOCOMPLETE FOR SEARCHBAR -->
+<!-- SET AUTOCOMPLETE FOR SEARCHBAR IN JQUERY -->
 <script>
   $(document).ready(function () {
     $("#searchbar").autocomplete({
@@ -131,16 +131,40 @@
 
 <!--PROVA DA ELIMINARE-->
 <div class ="center">
-  <button onclick="window.location.href='Pages/login.html'" class="button" role = "button">Entries</button>
-  <button class="button" role="button">Main Dishes</button>
-  <button class="button" role="button">Second courses</button>
-  <button class="button" role="button">Desserts</button>
+  <a class="button" role="button" href="./ricerca_bottoni.php?param=Entree">Entrees</a>
+  <a class="button" role="button" href="./ricerca_bottoni.php?param=Main Dish">Main Dishes</a>
+  <a class="button" role="button" href="./ricerca_bottoni.php?param=Second Course">Second Courses</a>
+  <a class="button" role="button" href="./ricerca_bottoni.php?param=Dessert">Desserts</a>  
 </div>
 <div class = "center">  
-  <button class="button2">Your recipes of the day!</button>
+  <button class="button2">Your suggested recipes!</button>
 </div>
 </div>
+<?php
+  $query = "SELECT * FROM ricette WHERE categoria = \"Entree\" ORDER BY RAND() LIMIT 1";
+  $result = pg_query($dbconn, $query);
+  while ($line = pg_fetch_array($result, null, PGSQL_ASSOC)) {
+    $title = $line["titolo"];
+    $utente = $line['utente'];
+    $difficulty = $line["difficulty"];
+    $prep_time = $line["prep_time"];
+    $people = $line["people"];
+    $cooking = $line["cooking_time"];
+    $hasImage = $line['image'];
+    $stars = Array(1,2,3,4,5);
+    if($hasImage) {
+      $parsedTitle = str_replace(array(" ", "'"), "", $title);
+      $imagePath = './recipes_pictures/' . $parsedTitle . $utente . '.jpeg';
+    }
+    else {
+      $imagePath = './icons/ricetta.jpeg';
+    }
 
+  // Visualizzazione card ============================================================================================================
+
+
+  }
+?>
 <!-- SCRIPT TO REDIRECT PAGE-->
 <script>
 		function goToPage() {
@@ -148,7 +172,7 @@
 		}
 	</script>
 
-
+<br><br><br><hr>
 <!--RECIPE CARDS-->
 <div class="container">
   <div class="row">
@@ -177,32 +201,30 @@
                   <div class="modal-dialog">
                     <div class="modal-content">
                       <div class="modal-header">
-                    
-                      <h1 text-align="center">Leave a Review</h1>
                         <button class="btn-close" data-dismiss="modal"></button>
                       </div>
                       <div class="modal-body">
                       <form method="POST" action="rating.php">
-                      <p class="modal-interface">Recipe Name: </p>
-                      <input class="modal-title" name="titolo" value='.$title.' readonly>
-                      <p class="modal-interface">Chef:</p>
-                      <input class="modal-title" name="utente" value='.$utente.' readonly>
-                      <p class="modal-interface"> How many stars you want to leave? </p>
+                      <p>Nome Ricetta: </p>
+                      <input name="titolo" value='.$title.' readonly>
+                      <p>Autore:</p>
+                      <input name="utente" value='.$utente.' readonly>
+                      <p> How many stars you want to leave? </p>
 
-                      <select name="stars" id="selezione" class="rating__star" aria-label="Default select example">
-                        <option value="1" name="1s">★</option>
-                        <option value="2" name="2s">★★</option>
-                        <option value="3" name="3s">★★★</option>
-                        <option value="4" name="4s">★★★★</option>
-                        <option value="5" name="5s" selected>★★★★★</option>
+                      <select name="stars" class="form-select" aria-label="Default select example">
+                        <option value="1" name="1s">1</option>
+                        <option value="2" name="2s">2</option>
+                        <option value="3" name="3s">3</option>
+                        <option value="4" name="4s">4</option>
+                        <option value="5" name="5s" selected>5</option>
                       </select>
 
-                      <p class="modal-interface">You want to leave a Comment?</p>
+                      <p>Vuoi lasciare una breve recensione?</p>
                       </div>
-                      <textarea name="recensione" class="textmodal" id="report" rows="3"> </textarea>
                       <div class="modal-footer">
-                      <button class="button5" data-dismiss="modal">Close</button>
-                      <input type="submit" class="button4" value="Confirm Review">
+                      <input type="textarea" name="recensione" class="form-control" id="report" rows="3"><br>
+                      <button class="btn btn-danger" data-dismiss="modal">Chiudi</button>
+                      <input type="submit" value="invia la recensione">
                         </form>
                       </div>
                     </div>

@@ -137,7 +137,7 @@
   <a class="button" role="button" href="./ricerca_bottoni.php?param=Dessert">Desserts</a>  
 </div>
 <div class = "center">  
-  <button class="button2">Your recipes of the day!</button>
+  <button class="button2">Your suggested recipes!</button>
 </div>
 </div>
 
