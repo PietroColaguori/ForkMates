@@ -1,4 +1,6 @@
-Website for sharing and creating recipes, created for the course "Linguaggi e tecnologie per il web" of Computer and Systems Engineering at Sapienza, University of Rome.
+# Website for creating, sharing and reviewing recipes.
+
+This website has been created for the course "Linguaggi e tecnologie per il web" of Computer and Systems Engineering at Sapienza, University of Rome.
 
 The features implemented are various, such as:
   1. Create and account / log in into the personal account.
